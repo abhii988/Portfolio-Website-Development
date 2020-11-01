@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="shortcut icon" href="icons/icon.ico">
+		<title>Home</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="CSS & Js/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	</head>
+	<body onload="getValue()" style="background-color: #8DBAC0;">
+		<header class="nv">
+            <div class="nv">
+				<nav>
+					<a href="index.html"><img src="icons/logo.png" height="40px" width="40px" align="left"></a>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="blog.html">Blog</a></li>
+						<li><a href="cv.html">CV</a></li>
+						<li><a href="research.html">Research</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<div class="slideshow-container">
+            <div class="mySlides image1 fade">
+                <img src="wallpapers/1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides image1 fade">
+                <img src="wallpapers/2.jpg" style="width:100%">
+            </div>
+            <div class="mySlides image1 fade">
+                <img src="wallpapers/3.jpg" style="width:100%">
+            </div>
+            <div class="mySlides image1 fade">
+                <img src="wallpapers/4.jpg" style="width:100%">
+            </div>
+            <div class="texth">
+                <p id="demo">Hello!</p>
+                <p style="font-size:icon">Welcome to my</p>
+                <div id="word">Web Site</div>
+            </div>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div style="text-align:center; margin-top: 10px;">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span> 
+        </div>
+		<div id="navicons">
+            <a href="index.html"><img src="icons/icoHome.png" class="icons icon1" title="Home"></a>
+			<a href="blog.html"><img src="icons/icoBlog.png" class="icons icon1" title="Blog"></a>
+			<a href="cv.html"><img src="icons/icoCV.png" class="icons icon1" title="CV"></a>
+			<a href="research.html"><img src="icons/icoRef.png" class="icons icon1" title="Research"></a>
+			<a href="contact.html"><img src="icons/icoCont.png" class="icons icon1" title="Contact"></a>
+        </div>
+		<div id="details">
+			<p id="det1">HEY! I am,</p>
+			<p class="det2">Abhishek Gupta.</p>
+			<p class="det2" style="color: black; font-size: 18px; margin-top: -2%;" >A Progressing IT Developer.</p>	
+			<p style="color: white; margin-left: 10%;">________________________</p>	
+            <img src="misc images/dev.jpg" id="dev">
+		</div>
+        <script type="text/javascript" src="CSS & Js/javascript.js"></script>
+	</body>
+</html>

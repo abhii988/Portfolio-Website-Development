@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="shortcut icon" href="icons/icon.ico">
+		<title>Contact Info</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="CSS & Js/style.css">
+	</head>
+	<body onload="startTime()" style="background-image: url(wallpapers/m3.jpg); background-size: cover; background-position: top;" >
+		<header>
+			<div class="nv">
+				<nav>
+					<a href="index.html"><img src="icons/logo.png" height="40px" width="40px" align="left"></a>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="blog.html">Blog</a></li>
+						<li><a href="cv.html">CV</a></li>
+						<li><a href="research.html">Research</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+        <div class="main" style="color: transparent;">
+            <form name="messageForm" onsubmit="validateForm()">
+                <br>
+                <table border="5"  style="color:navajowhite">
+                    <tr>
+                        <th colspan="2">
+
+                            <h1>Contact Me</h1>
+
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label><b>First Name:</b></label>
+                        </td>
+                        <td>
+                            <input type="text" name="Firstname" placeholder="Enter First Name" size="34" style="font-family: monospace;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label><b>Last Name:</b></label>
+                        </td>
+                        <td>
+                            <input type="text" name="Lastname" placeholder="Enter Last Name" size="34" style="font-family: monospace;">
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label><b>Email:</b></label>
+                        </td>
+                        <td>
+                            <input type="email" name="Email" placeholder="Enter Email" size="34" style="font-family: monospace;">
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label><b>Gender:</b></label>
+                        </td>
+                        <td >
+                            <input type="radio" name="Gender" value="male" checked> Male 
+                            <input type="radio" name="Gender" value="female" > Female
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label><b>Message:</b></label>
+                        </td>
+                        <td >
+                            <textarea name="Message" rows="10" cols="33" placeholder="Enter Message"></textarea>
+                        </td>
+                    </tr>
+                </table>
+                <p style="color: navajowhite; font-size: 20px; font-family: monospace;">
+                    <button class="send">Send</button> My Social Media Links:
+                </p>
+                <a href="https://www.fb.com/abhi988" style="margin-left: 5.3%" title="Facebok">
+                    <img src="socialicons/fb.png" height="30px" width="30px" >
+                </a>
+                <a href="https://www.twitter.com/abhi988" style="margin-left: 10%" title="Twitter">
+                    <img src="socialicons/tweet.png" height="30px" width="30px">
+                </a>
+                <a href="https://www.instagram.com/abhi988" style="margin-left: 10%" title="Instagram">
+                    <img src="socialicons/insta.png" height="30px" width="30px">
+                </a>
+                <a href="https://www.linkedin.com/in/abhishek-gupta-a4706417a" style="margin-left: 10%" title="LinkedIn">
+                    <img src="socialicons/linkedin.png" height="30px" width="30px">
+                </a>  
+                <a href="mailto:gupta.abhishek988@gmail.com" style="margin-left: 10%" title="Mail">
+                    <img src="socialicons/mail.png" height="30px" width="30px">
+                </a>
+                <div class="time"><h1 id="timeid"></h1></div>
+            </form>
+        </div>
+		<script type = "text/javascript">
+			function validateForm() {
+				var fname = document.forms["messageForm"]["Firstname"].value;
+				var lname = document.forms["messageForm"]["Lastname"].value;
+				var email = document.forms["messageForm"]["Email"].value;
+				var gender = document.forms["messageForm"]["Gender"].value;
+				var message = document.forms["messageForm"]["Message"].value;
+
+				if (fname == "" || lname == "" || email == "" || message == ""){
+					alert("Empty fields found. Please fill the form.");
+				}
+				else {
+					alert("Thank you for the feedback.");
+				}
+			}
+            function startTime() {
+                var today = new Date();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                var s = today.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('timeid').innerHTML =
+                h + ":" + m + ":" + s;
+                var t = setTimeout(startTime, 500);
+            }
+            function checkTime(i) {
+                if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+                return i;
+            }
+		</script>
+	</body>
+</html>
